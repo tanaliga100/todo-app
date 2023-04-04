@@ -90,15 +90,14 @@ const generateTodoDOM = (todo) => {
   todoEl.appendChild(containerEl);
 
   // Setup the remove button
-  removeButton.textContent = "remove";
-  removeButton.classList.add("button", "button--text");
+  removeButton.textContent = "delete";
+  removeButton.classList.add("button");
   todoEl.appendChild(removeButton);
   removeButton.addEventListener("click", () => {
     removeTodo(todo.id);
     saveTodos(todos);
     renderTodos(todos, filters);
   });
-
   return todoEl;
 };
 
